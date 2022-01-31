@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MediGuyApp</string>
+    <string name="post_title" />
+    <string name="Entry">Post Entry</string>
+    <string name="menu_title">Journal Entry</string>
+    <string name="signout">Signout</string>
+    <string name="listJournal_hint">Click Plus Button At The Top of the Screen to Add an Entry</string>
+    <string name="no_thoughts_hint">no_thoughts_hint</string>
+    <string name="no_entry_hint">no_entry_hint</string>
+</resources>

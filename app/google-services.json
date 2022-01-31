@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "902280974521",
+    "project_id": "mediguyapp",
+    "storage_bucket": "mediguyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902280974521:android:b816e9204bd50195bacb68",
+        "android_client_info": {
+          "package_name": "com.example.mediguyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902280974521-1fgfb6kcn67tma2ochjsc4caleq8l2pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG6NMyLicjAN4UfUUYLYc070AK7QAjruo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902280974521-1fgfb6kcn67tma2ochjsc4caleq8l2pr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
