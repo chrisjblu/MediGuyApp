@@ -68,7 +68,7 @@ public class JournalActivity extends AppCompatActivity implements View.OnClickLi
 
     private CollectionReference collectionReference = db.collection("Journal");
 
-
+///test
 
     BottomNavigationView bottomNavigationView;
     private Uri imageUri;
