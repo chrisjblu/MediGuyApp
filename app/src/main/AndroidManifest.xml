@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediGuyApp">
         <activity
+            android:name=".NewsDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".JournalListActivity"
             android:exported="false" />
         <activity
