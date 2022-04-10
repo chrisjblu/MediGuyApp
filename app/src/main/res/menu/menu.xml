@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/settings"
-        android:title="Settings"
+        android:title="Covid"
         android:icon="@drawable/ic_settings"/>
 
 </menu>
