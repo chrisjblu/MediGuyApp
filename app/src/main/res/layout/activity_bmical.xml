@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bmicalActivity">
+
+
+    <ImageView
+        android:id="@+id/imgdetail"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_above="@id/layoutcontent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:padding="10dp"
+        android:src="@drawable/greentick">
+
+    </ImageView>
+
+
+    <RelativeLayout
+        android:id="@+id/layoutcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/cardbg"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/bmid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="55"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/genderd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bmid"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Gender"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genderd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Category Problem"
+            android:id="@+id/displayt"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

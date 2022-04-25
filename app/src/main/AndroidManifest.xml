@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediGuyApp">
         <activity
+            android:name=".bmicalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckBmiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BmiCheckerActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewsDetailsActivity"
             android:exported="false" />
         <activity

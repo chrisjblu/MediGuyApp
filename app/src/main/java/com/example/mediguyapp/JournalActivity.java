@@ -40,7 +40,7 @@ import util.JournalApi;
 public class JournalActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    // declaring variables
+    // declare variables
     public static final int GALLERY_CODE = 1;
     private static final String TAG = "PostJournalAcitivty";
 
@@ -197,7 +197,7 @@ public class JournalActivity extends AppCompatActivity implements View.OnClickLi
 
                                 String imageUrl = uri.toString();
 
-                                //invoking journal
+                                //journal
                                 Journal journal = new Journal();
                                 journal.setTitle(title);
                                 journal.setJournalEntry(postEntry);
@@ -206,7 +206,7 @@ public class JournalActivity extends AppCompatActivity implements View.OnClickLi
                                 journal.setUserName(currentUserName);
                                 journal.setUserId(currentId);
 
-                                ///invoking collection of references
+                                ///collection of references
                                 collectionReference.add(journal)
                                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                             @Override

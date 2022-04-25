@@ -5,6 +5,7 @@ import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,7 +45,7 @@ private List<Journal> journalList;
 
         holder.title.setText(journal.getTitle());
         holder.entry.setText(journal.getJournalEntry());
-        ///holder.name.setText(journal.getUserName());
+        holder.name.setText(journal.getUserName());
 
         imageUrl = journal.getImageUrl();
 
@@ -76,6 +77,7 @@ private List<Journal> journalList;
     public class ViewHoder extends RecyclerView.ViewHolder {
         public TextView title, entry, date,name;
         public ImageView image;
+        public ImageButton shareBtn;
         String userId;
         String username;
 
@@ -87,6 +89,15 @@ private List<Journal> journalList;
             entry = itemView.findViewById(R.id.journal_entry_list);
             date =  itemView.findViewById(R.id.journal_time);
             image = itemView.findViewById(R.id.journal_image_list);
+            name = itemView.findViewById(R.id.journal_r_username);
+
+            shareBtn = itemView.findViewById(R.id.journal_r_btn);
+            shareBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //context.startActivity();
+                }
+            });
 
         }
     }

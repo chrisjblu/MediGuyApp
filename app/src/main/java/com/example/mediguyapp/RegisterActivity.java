@@ -39,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
     //connect to firestore
     private FirebaseFirestore db= FirebaseFirestore.getInstance();
 
+    ///creating Users collection
     private CollectionReference collectionReference = db.collection("Users");
 
 
@@ -72,10 +73,11 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         };
-
+        /// when you press the create acccount button
         createAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /// if the textfields of email password and username are not empty
                 if (!TextUtils.isEmpty(emailEditText.getText().toString())
                         && !TextUtils.isEmpty(passwordEditText.getText().toString())
                         && !TextUtils.isEmpty(userNameEditText.getText().toString())) {
@@ -101,6 +103,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void createUserEmailAccount(String email, String password, final String username) {
+
+        // if the email, username and password is not empty
         if (!TextUtils.isEmpty(email)
                 && !TextUtils.isEmpty(password)
                 && !TextUtils.isEmpty(username)) {
@@ -111,17 +115,17 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                //we take user to AddJournalActivity
+
                                 currentUser = firebaseAuth.getCurrentUser();
                                 assert currentUser != null;
                                 final String currentUserId = currentUser.getUid();
 
-                                //Create a user Map so we can create a user in the User collection
+                                // Creating a user map that will allow the creation of a user in the collection
                                 Map<String, String> userObj = new HashMap<>();
                                 userObj.put("userId", currentUserId);
                                 userObj.put("username", username);
 
-                                //save to our firestore database
+                                //saving to firestore database
                                 collectionReference.add(userObj)
                                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                                             @Override
@@ -129,6 +133,8 @@ public class RegisterActivity extends AppCompatActivity {
                                                 documentReference.get()
                                                         .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                                             @Override
+
+                                                            /// take the username from object
                                                             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                                                 if (Objects.requireNonNull(task.getResult()).exists()) {
                                                                     String name = task.getResult()
@@ -139,6 +145,8 @@ public class RegisterActivity extends AppCompatActivity {
                                                                     journalApi.setUserId(currentUserId);
                                                                     journalApi.setUsername(name);
 
+
+                                                                    /// take username and userid and redirect to dashboard
                                                                     Intent intent = new Intent(RegisterActivity.this,
                                                                             DashboardActivity.class);
                                                                     intent.putExtra("username", name);
