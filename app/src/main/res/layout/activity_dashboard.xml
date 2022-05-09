@@ -74,6 +74,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:id="@+id/bp"
                             android:src="@drawable/ic_baseline_bloodtype_24"
                             />
                         <TextView

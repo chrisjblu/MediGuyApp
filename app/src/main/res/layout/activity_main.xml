@@ -7,6 +7,19 @@
     android:background="#ffffff"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="407dp"
+        android:layout_height="128dp"
+        android:src="@drawable/medilogo"
+        app:layout_constraintBottom_toTopOf="@+id/email_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </ImageView>
+
+
     <AutoCompleteTextView
         android:id="@+id/email_et"
         android:layout_width="338dp"

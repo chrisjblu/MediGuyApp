@@ -26,16 +26,15 @@
 
 
     <RelativeLayout
+        android:id="@+id/male"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_above="@id/heightlay"
-        android:layout_marginBottom="32dp"
-        android:layout_toStartOf="@id/centervert"
-        android:background="@drawable/malenonfc"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:id="@+id/male"
-        >
+        android:layout_marginBottom="32dp"
+        android:layout_toStartOf="@id/centervert"
+        android:background="@drawable/malenonfc">
 
         <ImageView
             android:layout_width="170px"
@@ -48,20 +47,18 @@
         </ImageView>
 
         <TextView
+            android:id="@+id/tmale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:id="@+id/tmale"
-            android:text="Male"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
-            android:textAlignment="center">
+            android:text="Male"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold">
 
         </TextView>
-
-
 
 
     </RelativeLayout>

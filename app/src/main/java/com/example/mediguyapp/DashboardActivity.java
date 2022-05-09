@@ -15,7 +15,8 @@ import com.google.android.material.navigation.NavigationBarView;
 public class DashboardActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView;
-        ImageView myImageView;
+        ImageView myImageView, bpimage;
+
 
 
     @Override
@@ -27,11 +28,19 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         myImageView = (ImageView) findViewById(R.id.bmi);
+        bpimage = (ImageView) findViewById(R.id.bp);
 
         myImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),CheckBmiActivity.class));
+            }
+        });
+
+        bpimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),BloodPressureActivity.class));
             }
         });
 

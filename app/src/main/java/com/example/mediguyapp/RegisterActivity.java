@@ -53,6 +53,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        getSupportActionBar().hide();
+
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         createAccountButton = findViewById(R.id.reg_btn);
