@@ -31,6 +31,7 @@ private List<Journal> journalList;
 
     @NonNull
     @Override
+    ///creating view
     public JournalRecyclerInputer.ViewHoder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.journal_row, viewGroup, false);
@@ -48,12 +49,12 @@ private List<Journal> journalList;
         holder.name.setText(journal.getUserName());
 
         imageUrl = journal.getImageUrl();
-
+        /// setting a time of journal post
         String ago = (String) DateUtils.getRelativeTimeSpanString(journal.getTimedAdded().getSeconds() * 1000);
         holder.date.setText(ago);
 
 
-
+/// using picasso to download image
         Picasso.get()
                 .load(imageUrl)
                 .placeholder(R.drawable.image_one)
@@ -84,7 +85,7 @@ private List<Journal> journalList;
         public ViewHoder(@NonNull View itemView, Context ctx) {
             super(itemView);
             context = ctx;
-
+            /// getting inputs from user
             title = itemView.findViewById(R.id.journal_title_list);
             entry = itemView.findViewById(R.id.journal_entry_list);
             date =  itemView.findViewById(R.id.journal_time);
